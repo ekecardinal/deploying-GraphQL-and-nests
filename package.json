@@ -17,8 +17,7 @@
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
-    "test:e2e": "jest --config ./test/jest-e2e.json",
-    "prepare": "husky"
+    "test:e2e": "jest --config ./test/jest-e2e.json"
   },
   "dependencies": {
     "@apollo/server": "^4.11.0",
@@ -79,17 +78,16 @@
     ],
     "coverageDirectory": "../coverage",
     "testEnvironment": "node"
-  }, 
+  },
   "lint-staged": {
     "*.{js,ts,cjs,mjs,d.cts,d.mts,jsx,tsx,json,jsonc}": [
-      "biome check --files-ignore-unknown=true", 
-      "biome check --write --no-errors-on-unmatched", 
-      "biome check --write --organize-imports-enabled=false --no-errors-on-unmatched", 
-      "biome check --write --unsafe --no-errors-on-unmatched", 
-      "biome format --write --no-errors-on-unmatched", 
+      "biome check --files-ignore-unknown=true",
+      "biome check --write --no-errors-on-unmatched",
+      "biome check --write --organize-imports-enabled=false --no-errors-on-unmatched",
+      "biome check --write --unsafe --no-errors-on-unmatched",
+      "biome format --write --no-errors-on-unmatched",
       "biome lint --write --no-errors-on-unmatched"
     ],
-   
     "*": [
       "biome check --no-errors-on-unmatched --files-ignore-unknown=true"
     ]
